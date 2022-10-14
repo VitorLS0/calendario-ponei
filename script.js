@@ -93,8 +93,14 @@ function changeToDoDay(Mes) {
     var dia = (e.target.textContent);
     console.log(dia,Mes);
 
-    if(Mes<10){
+    if(Mes<10 && dia<10){
+      document.getElementById("diaTitulo").innerHTML=("0"+dia+"/"+"0"+Mes);
+    }
+    else if(Mes<10){
       document.getElementById("diaTitulo").innerHTML=(dia+"/"+"0"+Mes);
+    }
+    else if(dia<10){
+      document.getElementById("diaTitulo").innerHTML=("0"+dia+"/"+Mes);
     }
     else{
       document.getElementById("diaTitulo").innerHTML=(dia+"/"+Mes);

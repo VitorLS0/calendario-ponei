@@ -1,11 +1,12 @@
 {
     "tarefas": [
         {
-            "nome": "Estudar pra prova",
-            "dia": "7",
-            "prazo": "9",
-            "mes": "10",
-            "faltam": "2"
+            "nome": "",
+            "dia": "",
+            "mes": "",
+            "prazo": "",
+            "faltam": "",
+            "completo": ""
         }
     ]
 }
