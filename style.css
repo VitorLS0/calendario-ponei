@@ -205,7 +205,7 @@
     .calendar {
         width: 70%;
         height: 82rem;
-        background-color: #222227;
+        background-color: #202027;
         position: fixed;
         left: 0;
     }
@@ -285,8 +285,8 @@
         cursor: pointer;
     }
 
-    .prev-date,
-    .next-date {
+    .prevDate,
+    .nextDate {
         opacity: 0.5;
     }
 
@@ -295,7 +295,7 @@
     }
 
     .tarefas {
-        background-color: #12121f;
+        background-color: #202027;
         width: 30%;
         height: 100%;
         padding-left: 1rem;
@@ -312,7 +312,9 @@
         position: fixed;
         right: 0;
         top: 0;
-        background-color: rgba(18, 18, 31, 0.8);
+        background-color: rgba(32, 32, 39, 0.95);
+        border-color: #87ceeb;
+        border: 2;
         justify-content: center;
     }
 
@@ -352,12 +354,12 @@
     }*/
 
     .adicionar {
-        float: left;
-        margin-top: 1rem;
-        margin-left: 0rem;
+        width: 80%;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
         font-weight: 400;
-        padding: 2rem;
+        padding: 0.5rem;
         border-radius: 5rem;
     }
 

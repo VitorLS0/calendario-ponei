@@ -114,7 +114,16 @@ function changeToDoDay(Mes) {
 renderCalendar();
 
 
+const adicionar = document.querySelector(".adicionar");
+adicionar.addEventListener("click", novaTarefa);
 
+function novaTarefa(){
+  const newDiv = document.createElement("div");
+  
+  newDiv.textContent = ""
+
+  console.log("dkhgdhf");
+}
 
 
 

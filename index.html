@@ -44,25 +44,10 @@
                 <h2></h2>
             </div>
 
-            <div class="tarefa">
 
-                <div class="input-group input-group-lg mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Nome" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-
-                <div class="direita">
-                    <button class="adicionar">Adicionar</button>
-                    <p class="prazo">Prazo: <b>xx/yy/zz</b></p>
-                    <p class="faltam">Faltam <b>X</b> dias</p>
-                </div>
-
+            <div class="direita">
+                <button class="adicionar" onclick=novaTarefa()>Nova Tarefa</button>
             </div>
-
-
 
 
             <div class="tarefa">
@@ -70,7 +55,8 @@
                 <h2 class="nome">Nome</h2>
 
                 <div class="slider">
-                    <input type="range" class="form-range sliderBar" min="0" max="10" step="2.5" value="0" id="customRange3">
+                    <input type="range" class="form-range sliderBar" min="0" max="10" step="2.5" value="0"
+                        id="customRange3">
                 </div>
 
                 <div class="direita">
