@@ -313,8 +313,6 @@
         right: 0;
         top: 0;
         background-color: rgba(32, 32, 39, 0.95);
-        border-color: #87ceeb;
-        border: 2;
         justify-content: center;
     }
 
@@ -423,13 +421,39 @@
         color: #fb4d22;
     }
 
-    .form-control {
-        background-color: rgb(93, 254, 48);
-        height: 3rem;
+    .input-group {
+        background-color: #ddd;
+        height: 5rem;
+        width: 100%;
         border-radius: 3rem;
         padding: 1rem;
         margin-top: 1rem;
+        margin-bottom: 2rem;
+        align-items: center;
     }
+
+    .form-control{
+        background-color: #ddd;
+        font-size: 2rem;
+        font-weight: 350;
+        height: 3rem;
+        width:80%;
+        float: left;
+        border: 0;
+    }
+
+    .btn-outline-secondary{
+        background-color: #fff;
+        font-size: 1.5rem;
+        font-weight: 350;
+        width: 20%;
+        height: 3rem;
+        border: 0;
+        border-radius: 3rem;
+        float: inline-end;
+        
+    }
+
 
 
 }

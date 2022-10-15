@@ -71,7 +71,7 @@ const renderCalendar = () => {
 
   var numMes = (date.getMonth() + 1);
 
-  
+
 
   changeToDoDay(numMes);
 };
@@ -91,19 +91,19 @@ document.querySelector(".next").addEventListener("click", () => {
 function changeToDoDay(Mes) {
   window.days.onclick = e => {
     var dia = (e.target.textContent);
-    console.log(dia,Mes);
+    console.log(dia, Mes);
 
-    if(Mes<10 && dia<10){
-      document.getElementById("diaTitulo").innerHTML=("0"+dia+"/"+"0"+Mes);
+    if (Mes < 10 && dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + "0" + Mes);
     }
-    else if(Mes<10){
-      document.getElementById("diaTitulo").innerHTML=(dia+"/"+"0"+Mes);
+    else if (Mes < 10) {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + "0" + Mes);
     }
-    else if(dia<10){
-      document.getElementById("diaTitulo").innerHTML=("0"+dia+"/"+Mes);
+    else if (dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + Mes);
     }
-    else{
-      document.getElementById("diaTitulo").innerHTML=(dia+"/"+Mes);
+    else {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + Mes);
     }
 
   }
@@ -113,13 +113,32 @@ function changeToDoDay(Mes) {
 
 renderCalendar();
 
+//Criar os inputs e testar se isso funciona. video:https://youtu.be/NxVCq4p0Kb0
+let tarefas = [];
+// example {id:1592304983049, title: 'Deadpool', year: 2015}
+const adTarefa = (ev) => {
+  ev.preventDefault();  //to stop the form submitting
+  let movie = {
+    nome: document.getElementById('nome').value,
+    dia: dia,
+    mes: Mes,
+    prazo: document.getElementById('prazo').value,
+    faltam: "prazo - dia atual",
+    completo: "value da barra",
+    objetivo: document.getElementById('objetivo').value
+  }
+  tarefas.push(movie);
+  document.forms[0].reset();
+}
+
+
 
 const adicionar = document.querySelector(".adicionar");
 adicionar.addEventListener("click", novaTarefa);
 
-function novaTarefa(){
+function novaTarefa() {
   const newDiv = document.createElement("div");
-  
+
   newDiv.textContent = ""
 
   console.log("dkhgdhf");
