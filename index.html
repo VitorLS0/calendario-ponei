@@ -41,9 +41,10 @@
 
             <div class="diaTarefa">
                 <h1 id="diaTitulo"></h1>
-                <h2></h2>
+                <h2>Hoje</h2>
             </div>
 
+<<<<<<< Updated upstream
             <div class="tarefa">
 
                 <div class="input-group input-group-lg mb-3">
@@ -61,8 +62,53 @@
                 </div>
 
             </div>
+=======
+            <div class="direita">
+                <button class="adicionar" onclick=novaTarefa()>Nova Tarefa</button>
+            </div>
 
 
+            <form action="#" id="formulario" onsubmit="return false">
+
+                <div class="form-group tarefaIn">
+                    <input class="form-field" type="nome" name="nome" id="nome" placeholder="Tarefa">
+                </div>
+
+                <div class="form-group tarefaIn">
+                    <input class="form-field" type="date" name="prazo" id="prazo" placeholder="Prazo __/__">
+                </div>
+>>>>>>> Stashed changes
+
+                <div class="form-group tarefaIn">
+                    <input type="range" class="form-range sliderBar" name="feito" id="feito" min="0" max="10" step="2.5"
+                        value="0" id="customRange3">
+                </div>
+
+                <input class="form-field op" type="etapas" name="etapas" id="etapas" placeholder="Nº de Etapas">
+                <input class="form-field op" type="divisoes" name="divisoes" id="divisoes" placeholder="Divisões">
+                <input class="form-field op" type="objetivo" name="objetivo" id="objetivo" placeholder="Objetivo">
+
+                <div class="form-group tarefaIn colorPal">
+                    <input class="form-field" type="color" name="color" id="color" placeholder="Cor">
+                </div>
+
+                <div class="form-group tarefaIn">
+                    <select name="cor" id="cor">
+                        <option label="branco" value="white"></option>
+                        <option label="verde" value="green"></option>
+                        <option label="azul" value="blue"></option>
+                        <option label="amarelo" value="yellow"></option>
+                        <option label="laranja" value="orange"></option>
+                        <option label="vermelho" value="red"></option>
+                    </select>
+                </div>
+
+                <div class="direita">
+                    <button id="criar" class="criar" type="criar" name="criar" onclick=funcForm()
+                        onsubmit="return false">Criar</button>
+                </div>
+
+            </form>
 
 
             <div class="tarefa">

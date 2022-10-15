@@ -1,7 +1,7 @@
-const date = new Date();
-const locale = "pt-br"
+var date = new Date();
+var locale = "pt-br"
 
-const renderCalendar = () => {
+var renderCalendar = () => {
   date.setDate(1);
 
   const monthDays = document.querySelector(".days");
@@ -69,11 +69,16 @@ const renderCalendar = () => {
     monthDays.innerHTML = days;
   }
 
-  var numMes = (date.getMonth() + 1);
 
+<<<<<<< Updated upstream
   
+=======
+
+  var numMes = (date.getMonth() + 1);
+>>>>>>> Stashed changes
 
   changeToDoDay(numMes);
+
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -104,11 +109,17 @@ function changeToDoDay(Mes) {
 }
 
 
-
 renderCalendar();
 
 
 
+<<<<<<< Updated upstream
+=======
+function funcForm(){
+
+  console.log(Array.from(document.querySelectorAll('#formulario input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {}));
+};
+>>>>>>> Stashed changes
 
 
 

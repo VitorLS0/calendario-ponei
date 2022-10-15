@@ -300,7 +300,7 @@
         height: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 12rem;
+        padding-top: 10.6rem;
         text-align: center;
         justify-content: center;
 
@@ -320,20 +320,28 @@
         font-size: 4rem;
         font-weight: 500;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        color: #87ceeb;
+    }
+
+    .tarefas h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0.5rem;
         color: #87ceeb;
     }
 
     .tarefa {
         /*background: linear-gradient(#333336, #222227);*/
-        background-color: #333336;
+        background-color: rgba(0, 0, 0, 0);
         height: 14rem;
-        margin-top: 0rem;
-        margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 0.5rem;
-
+        border: 2px solid #666;
     }
 
     .tarefa h2 {
@@ -351,6 +359,7 @@
     }*/
 
     .adicionar {
+<<<<<<< Updated upstream
         float: left;
         margin-top: 1rem;
         margin-left: 0rem;
@@ -358,6 +367,109 @@
         font-weight: 400;
         padding: 2rem;
         border-radius: 5rem;
+=======
+        width: 100%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .adicionar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+    }
+
+    .tarefaIn input {
+
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+        -webkit-appearance: none;
+    }
+
+    .tarefaIn input:focus {
+        background-color: #12121f;
+        color: #ddd;
+        transition: 0.2s;
+    }
+
+    .tarefaIn select {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .op {
+        background-color: #fff;
+        color: #555559;
+        width: 32.85%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .colorPal {
+
+    }
+
+    .tarefaIn option {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .criar {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .criar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+>>>>>>> Stashed changes
     }
 
     .slider {
@@ -379,14 +491,19 @@
     }
 
     .sliderBar::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
+        -webkit-appearance: none;
+        /* Override default look */
         appearance: circle;
-        width: 2rem; /* Set a specific slider handle width */
-        height: 2rem; /* Slider handle height */
+        width: 2rem;
+        /* Set a specific slider handle width */
+        height: 2rem;
+        /* Slider handle height */
         border-radius: 5rem;
-        background: #87ceeb; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-      }
+        background: #aaa;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+    }
 
     .prazo {
         right: 0%;
@@ -428,5 +545,31 @@
         margin-top: 1rem;
     }
 
+<<<<<<< Updated upstream
+=======
+    .form-control {
+        background-color: #ddd;
+        font-size: 2rem;
+        font-weight: 350;
+        height: 3rem;
+        width: 80%;
+        float: left;
+        border: 0;
+    }
+
+    .btn-outline-secondary {
+        background-color: #fff;
+        font-size: 1.5rem;
+        font-weight: 350;
+        width: 20%;
+        height: 3rem;
+        border: 0;
+        border-radius: 3rem;
+        float: inline-end;
+
+    }
+
+
+>>>>>>> Stashed changes
 
 }
