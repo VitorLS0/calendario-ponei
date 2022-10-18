@@ -1,3 +1,4 @@
+
 const date = new Date();
 const locale = "pt-br"
 
@@ -66,14 +67,19 @@ const renderCalendar = () => {
 
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="nextDate">${j}</div>`;
+
     monthDays.innerHTML = days;
   }
 
   var numMes = (date.getMonth() + 1);
 
-  
+
+
+  var numMes = (date.getMonth() + 1);
+
 
   changeToDoDay(numMes);
+
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -88,27 +94,82 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
+//Define o título da parte de tarefas de acordo com o dia atual
+
+var dia = new Date().getDate();
+var Mes = new Date().getMonth()+1;
+document.getElementById("toDoHoje").innerHTML=("Hoje");
+
+if(Mes<10){
+  document.getElementById("diaTitulo").innerHTML=(dia+"/"+"0"+Mes);
+}
+else{
+  document.getElementById("diaTitulo").innerHTML=(dia+"/"+Mes);
+
+  //
+}
+
+renderCalendar();
+
+
+//Muda o título da parte de tarefas de acordo com o dia clicado no calendário
+
 function changeToDoDay(Mes) {
   window.days.onclick = e => {
     var dia = (e.target.textContent);
     console.log(dia,Mes);
 
-    if(Mes<10){
-      document.getElementById("diaTitulo").innerHTML=(dia+"/"+"0"+Mes);
+    //Muda o título (dd/mm) e coloca um "0" em números do dia e mês menores que 10
+
+    if (Mes < 10 && dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + "0" + Mes);
+    }
+    else if (Mes < 10) {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + "0" + Mes);
+    }
+    else if (dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + Mes);
+    }
+    else {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + Mes);
+    }
+
+    //Muda o subtítulo
+
+    if(dia == new Date().getDate() && Mes == new Date().getMonth()+1){
+      document.getElementById("toDoHoje").innerHTML=("Hoje");
+    }
+    else if(dia == new Date().getDate()-1 && Mes == new Date().getMonth()+1){
+      document.getElementById("toDoHoje").innerHTML=("Ontem");
+    }
+    else if(dia == new Date().getDate()+1 && Mes == new Date().getMonth()+1){
+      document.getElementById("toDoHoje").innerHTML=("Amanhã");
     }
     else{
-      document.getElementById("diaTitulo").innerHTML=(dia+"/"+Mes);
+      document.getElementById("toDoHoje").innerHTML=("");
     }
+
+
+    
 
   }
 }
 
+//Abre o formulário para criar nova tarefa
 
+function novaTarefa(){
 
-renderCalendar();
+  document.getElementById("formDiv").style.display="inline";
+}
 
+//Transforma os dados do formulário em uma array e imprime no console
 
+function funcForm(){
 
+  console.log(Array.from(document.querySelectorAll('#formulario input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {}));
+  document.getElementById("formDiv").style.display="none";
+  document.getElementById("formulario").reset();
+}
 
 
 

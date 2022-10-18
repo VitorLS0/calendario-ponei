@@ -40,6 +40,8 @@
     .month i {
         font-size: 2.5rem;
         cursor: pointer;
+        padding: 20px;
+        margin: -20px;
         color: #888;
     }
 
@@ -170,7 +172,308 @@
     }
 
 
+    .diaTarefa {
+        width: 100%;
+        height: 10rem;
+        right: 0;
+        top: 0;
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+        background-color: rgba(18, 18, 31, 0.9);
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #diaTitulo{
+        font-size: 4rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0rem;
+        color: #87ceeb;
+    }
+
+    #toDoHoje{
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0rem;
+
+        color: #87ceeb;
+    }
+
+    .diaTarefa i {
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding: 20px;
+        margin: -20px;
+        color: #888;
+    }
+
+    .tarefas h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 1rem;
+        color: #87ceeb;
+    }
+
+    .tarefas h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0.5rem;
+
+        color: #87ceeb;
+    }
+
+    .tarefa {
+        /*background: linear-gradient(#333336, #222227);*/
+        background-color: rgba(0, 0, 0, 0);
+        background-color: #333336;
+        height: 14rem;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0.5rem;
+        border: 2px solid #666;
+
+    }
+
+    .adicionar {
+        width: 100%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .adicionar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+    }
+
+    .tarefaIn input {
+
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+        -webkit-appearance: none;
+    }
+
+    .tarefaIn input:focus {
+        background-color: #12121f;
+        color: #ddd;
+        transition: 0.2s;
+    }
+
+    input[type="date"]:not(.has-value):before {
+        color: #000;
+        content: attr(placeholder);
+    }
+
+    .tarefaIn select {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .op {
+        background-color: #fff;
+        color: #555559;
+        width: 80%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+
+    .tarefaIn option {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    #sliderDiv{
+        width: 100%;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+        -webkit-appearance: none;
+    }
+
+    .criar {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .criar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+
+    }
+
+    .slider {
+        float: left;
+        margin-top: 3rem;
+        margin-left: 0rem;
+        width: 50%;
+    }
+
+    .sliderBar {
+        width: 100%;
+        height: 1.5rem;
+        padding: 0;
+        background-color: #777;
+        border-radius: 3rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .sliderBar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /* Override default look */
+
+        appearance: circle;
+        width: 2rem;
+        /* Set a specific slider handle width */
+        height: 2rem;
+        /* Slider handle height */
+
+        border-radius: 5rem;
+        background: #aaa;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+
+
+    }
+
+    .prazo {
+        right: 0%;
+        margin-top: 0rem;
+        margin-right: 2rem;
+    }
+
+    .faltam {
+        right: 0%;
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
+
+    .tarefa p {
+        font-size: 2rem;
+        font-weight: 350;
+        text-align: right;
+        margin-bottom: 1rem;
+        color: #ddd;
+    }
+
+    .prazo b {
+        font-size: 2rem;
+        font-weight: 350;
+        color: #faa23e;
+    }
+
+    .faltam b {
+        font-size: 2rem;
+        font-weight: 350;
+        color: #fb4d22;
+    }
+
+    #formDiv {
+        display: none;
+    }
+
+    .form-control {
+        background-color: rgb(93, 254, 48);
+        height: 3rem;
+        border-radius: 3rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .form-control {
+        background-color: #ddd;
+        font-size: 2rem;
+        font-weight: 350;
+        height: 3rem;
+        width: 80%;
+        float: left;
+        border: 0;
+    }
+
+    .btn-outline-secondary {
+        background-color: #fff;
+        font-size: 1.5rem;
+        font-weight: 350;
+        width: 20%;
+        height: 3rem;
+        border: 0;
+        border-radius: 3rem;
+        float: inline-end;
+
+    }
+
 }
+
+
+
+
+
 
 
 
@@ -285,8 +588,8 @@
         cursor: pointer;
     }
 
-    .prev-date,
-    .next-date {
+    .prevDate,
+    .nextDate {
         opacity: 0.5;
     }
 
@@ -300,7 +603,7 @@
         height: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 12rem;
+        padding-top: 10.6rem;
         text-align: center;
         justify-content: center;
 
@@ -312,52 +615,179 @@
         position: fixed;
         right: 0;
         top: 0;
-        background-color: rgba(18, 18, 31, 0.8);
+        padding: 0 2rem;
+        background-color: rgba(18, 18, 31, 1);
         justify-content: center;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #diaTitulo{
+        font-size: 4rem;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 0rem;
+        color: #87ceeb;
+    }
+
+    #toDoHoje{
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0rem;
+
+        color: #87ceeb;
+    }
+
+    .diaTarefa i {
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding: 20px;
+        margin: -20px;
+        color: #87ceeb;
     }
 
     .tarefas h1 {
         font-size: 4rem;
         font-weight: 500;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        color: #87ceeb;
+    }
+
+    .tarefas h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0.5rem;
+
         color: #87ceeb;
     }
 
     .tarefa {
         /*background: linear-gradient(#333336, #222227);*/
+        background-color: rgba(0, 0, 0, 0);
         background-color: #333336;
         height: 14rem;
-        margin-top: 0rem;
-        margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 0.5rem;
+        border: 2px solid #666;
 
     }
 
-    .tarefa h2 {
-        font-size: 2.5rem;
-        font-weight: 500;
-        text-align: center;
-        margin-left: 0.5rem;
-        margin-bottom: 1rem;
-        color: #ddd;
-    }
-
-    /*.direita {
-        width: 50%;
-        display: inline;
-    }*/
 
     .adicionar {
-        float: left;
-        margin-top: 1rem;
-        margin-left: 0rem;
+        width: 100%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
         font-size: 2rem;
         font-weight: 400;
-        padding: 2rem;
-        border-radius: 5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .adicionar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+    }
+
+    .tarefaIn input {
+
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+        -webkit-appearance: none;
+    }
+
+    .tarefaIn input:focus {
+        background-color: #12121f;
+        color: #ddd;
+        transition: 0.2s;
+    }
+
+    input[type="date"]:not(.has-value):before {
+        color: #000;
+        content: attr(placeholder);
+    }
+
+    .tarefaIn select {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .op {
+        background-color: #fff;
+        color: #555559;
+        width: 32.85%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+
+    .tarefaIn option {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .criar {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #555559;
+        color: #eee;
+    }
+
+    .criar:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+        border-color: rgba(0, 0, 0, 0);
+        transition: 0.2s;
+
     }
 
     .slider {
@@ -379,14 +809,23 @@
     }
 
     .sliderBar::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
+        -webkit-appearance: none;
+        /* Override default look */
+
         appearance: circle;
-        width: 2rem; /* Set a specific slider handle width */
-        height: 2rem; /* Slider handle height */
+        width: 2rem;
+        /* Set a specific slider handle width */
+        height: 2rem;
+        /* Slider handle height */
+
         border-radius: 5rem;
-        background: #87ceeb; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-      }
+        background: #aaa;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+
+
+    }
 
     .prazo {
         right: 0%;
@@ -420,6 +859,10 @@
         color: #fb4d22;
     }
 
+    #formDiv {
+        display: none;
+    }
+
     .form-control {
         background-color: rgb(93, 254, 48);
         height: 3rem;
@@ -427,6 +870,29 @@
         padding: 1rem;
         margin-top: 1rem;
     }
+
+    .form-control {
+        background-color: #ddd;
+        font-size: 2rem;
+        font-weight: 350;
+        height: 3rem;
+        width: 80%;
+        float: left;
+        border: 0;
+    }
+
+    .btn-outline-secondary {
+        background-color: #fff;
+        font-size: 1.5rem;
+        font-weight: 350;
+        width: 20%;
+        height: 3rem;
+        border: 0;
+        border-radius: 3rem;
+        float: inline-end;
+
+    }
+
 
 
 }
