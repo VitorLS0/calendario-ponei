@@ -102,8 +102,8 @@
         cursor: pointer;
     }
 
-    .prev-date,
-    .next-date {
+    .prevDate,
+    .nextDate {
         opacity: 0.5;
     }
 
@@ -507,7 +507,7 @@
 
     .calendar {
         width: 70%;
-        height: 82rem;
+        height: 100%;
         background-color: #222227;
         position: fixed;
         left: 0;
