@@ -2,6 +2,33 @@
 const date = new Date();
 const locale = "pt-br"
 
+var last = new Date(
+  date.getFullYear(),
+  date.getMonth() + 1,
+  0
+).getDate();
+
+console.log(last);
+
+const listaTarefasMock = {
+  "tarefas": [
+    {
+      "nome": "",
+      "prazo": "",
+      "feito": "",
+      "etapas": "",
+      "divisoes": "",
+      "objetivo": "",
+      "cor": ""
+    }
+  ]
+}
+
+let listaTarefas = JSON.parse(localStorage.getItem("dbTasks"));
+if (!listaTarefas) {
+  listaTarefas = listaTarefasMock;
+}
+
 const renderCalendar = () => {
   date.setDate(1);
 
@@ -44,6 +71,7 @@ const renderCalendar = () => {
     "Dezembro",
   ];
 
+
   document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
   document.querySelector(".date p").innerHTML = new Date().toLocaleDateString(locale);
@@ -75,10 +103,8 @@ const renderCalendar = () => {
 
 
 
-  var numMes = (date.getMonth() + 1);
-
-
   changeToDoDay(numMes);
+
 
 };
 
@@ -97,14 +123,14 @@ document.querySelector(".next").addEventListener("click", () => {
 //Define o título da parte de tarefas de acordo com o dia atual
 
 var dia = new Date().getDate();
-var Mes = new Date().getMonth()+1;
-document.getElementById("toDoHoje").innerHTML=("Hoje");
+var Mes = new Date().getMonth() + 1;
+document.getElementById("toDoHoje").innerHTML = ("Hoje");
 
-if(Mes<10){
-  document.getElementById("diaTitulo").innerHTML=(dia+"/"+"0"+Mes);
+if (Mes < 10) {
+  document.getElementById("diaTitulo").innerHTML = (dia + "/" + "0" + Mes);
 }
-else{
-  document.getElementById("diaTitulo").innerHTML=(dia+"/"+Mes);
+else {
+  document.getElementById("diaTitulo").innerHTML = (dia + "/" + Mes);
 
   //
 }
@@ -116,8 +142,8 @@ renderCalendar();
 
 function changeToDoDay(Mes) {
   window.days.onclick = e => {
-    var dia = (e.target.textContent);
-    console.log(dia,Mes);
+    dia = (e.target.textContent);
+    console.log(dia, Mes);
 
     //Muda o título (dd/mm) e coloca um "0" em números do dia e mês menores que 10
 
@@ -136,42 +162,122 @@ function changeToDoDay(Mes) {
 
     //Muda o subtítulo
 
-    if(dia == new Date().getDate() && Mes == new Date().getMonth()+1){
-      document.getElementById("toDoHoje").innerHTML=("Hoje");
+    if (dia == new Date().getDate() && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Hoje");
     }
-    else if(dia == new Date().getDate()-1 && Mes == new Date().getMonth()+1){
-      document.getElementById("toDoHoje").innerHTML=("Ontem");
+    else if (dia == new Date().getDate() - 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Ontem");
     }
-    else if(dia == new Date().getDate()+1 && Mes == new Date().getMonth()+1){
-      document.getElementById("toDoHoje").innerHTML=("Amanhã");
+    else if (dia == new Date().getDate() + 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Amanhã");
     }
-    else{
-      document.getElementById("toDoHoje").innerHTML=("");
+    else {
+      document.getElementById("toDoHoje").innerHTML = ("");
     }
 
 
-    
 
   }
 }
 
+function funcPrevDia() {
+
+  if (dia > 1) {
+
+    dia -= 1;
+
+    if (Mes < 10 && dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + "0" + Mes);
+    }
+    else if (Mes < 10) {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + "0" + Mes);
+    }
+    else if (dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + Mes);
+    }
+    else {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + Mes);
+    }
+
+
+    if (dia == new Date().getDate() && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Hoje");
+    }
+    else if (dia == new Date().getDate() - 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Ontem");
+    }
+    else if (dia == new Date().getDate() + 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Amanhã");
+    }
+    else {
+      document.getElementById("toDoHoje").innerHTML = ("");
+    }
+  }
+
+  console.log(dia);
+}
+
+
+function funcNextDia() {
+
+  if (dia < last) {
+
+    console.log(last);
+    dia = dia - 1 + 1;
+    dia += 1;
+
+    if (Mes < 10 && dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + "0" + Mes);
+    }
+    else if (Mes < 10) {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + "0" + Mes);
+    }
+    else if (dia < 10) {
+      document.getElementById("diaTitulo").innerHTML = ("0" + dia + "/" + Mes);
+    }
+    else {
+      document.getElementById("diaTitulo").innerHTML = (dia + "/" + Mes);
+    }
+
+
+    if (dia == new Date().getDate() && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Hoje");
+    }
+    else if (dia == new Date().getDate() - 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Ontem");
+    }
+    else if (dia == new Date().getDate() + 1 && Mes == new Date().getMonth() + 1) {
+      document.getElementById("toDoHoje").innerHTML = ("Amanhã");
+    }
+    else {
+      document.getElementById("toDoHoje").innerHTML = ("");
+    }
+  }
+
+  console.log(dia);
+
+}
+
+
 //Abre o formulário para criar nova tarefa
 
-function novaTarefa(){
+function novaTarefa() {
 
-  document.getElementById("formDiv").style.display="inline";
+  document.getElementById("formDiv").style.display = "inline";
 }
 
 //Transforma os dados do formulário em uma array e imprime no console
 
-function funcForm(){
+function funcForm() {
 
-  console.log(Array.from(document.querySelectorAll('#formulario input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {}));
-  document.getElementById("formDiv").style.display="none";
+  let task = Array.from(document.querySelectorAll('#formulario input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {});
+  console.log(task)
+  listaTarefas.tarefas.push(task)
+  console.log(listaTarefas.tarefas)
+  localStorage.setItem("dbTasks", JSON.stringify(listaTarefas))
+
+  document.getElementById("formDiv").style.display = "none";
   document.getElementById("formulario").reset();
 }
-
-
-
 
 
