@@ -536,11 +536,17 @@
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
 
     .month p {
         font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .month p:hover{
+        font-weight: 500;
+        cursor: pointer;
     }
 
     .weekdays {
@@ -598,7 +604,7 @@
     }
 
     .tarefas {
-        background-color: #12121f;
+        background-color: #12121a;
         width: 30%;
         height: 100%;
         padding-left: 1rem;
@@ -627,7 +633,7 @@
 
     #diaTitulo{
         font-size: 4rem;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
         margin-top: 0rem;
         color: #87ceeb;
@@ -670,7 +676,7 @@
     .tarefa {
         /*background: linear-gradient(#333336, #222227);*/
         background-color: rgba(0, 0, 0, 0);
-        background-color: #333336;
+
         height: 14rem;
         margin-top: 2rem;
         margin-bottom: 0rem;
@@ -678,7 +684,7 @@
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 0.5rem;
-        border: 2px solid #666;
+        border: 2px solid #a6a6a6;
 
     }
 
@@ -757,6 +763,20 @@
 
 
     .tarefaIn option {
+        background-color: #fff;
+        color: #555559;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+    }
+
+    .tarefaIn textarea {
         background-color: #fff;
         color: #555559;
         width: 100%;
@@ -893,6 +913,35 @@
 
     }
 
+    .days div {
+        display: inline-block;
+    }
+
+    .days b {
+        font-size: 1.5rem;
+        font-weight: 350;
+        letter-spacing: -0.25rem;
+    }
+
+    .green {
+        color: rgb(52, 204, 52);
+    }
+
+    .blue {
+        color: rgb(30, 169, 215);
+    }
+
+    .yellow {
+        color: rgb(255, 255, 65);
+    }
+
+    .orange {
+        color:rgb(255, 180, 41);
+    }
+
+    .red {
+        color: rgb(237, 34, 34);
+    }
 
 
 }
