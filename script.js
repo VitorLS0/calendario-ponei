@@ -16,6 +16,7 @@ const listaTarefasMock = {
       "nome": "",
       "dia": "",
       "prazo": "",
+      "faltam": "",
       "descricao": "",
       "color": ""
     }
@@ -327,10 +328,20 @@ function funcForm() {
   let task = Array.from(document.querySelectorAll('#formulario input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {});
   task.dia = dataHoje;
   task.cor = document.querySelector("#cor").value;
-  console.log(task)
-  listaTarefas.tarefas.push(task)
-  console.log(listaTarefas.tarefas)
-  localStorage.setItem("dbTasks", JSON.stringify(listaTarefas))
+
+
+  // Usar o ultimo dia de cada mês e o difMes pra achar o faltam
+
+  var difMes = task.prazo.slice(5, 7) - task.dia.slice(3, 5);
+  //task.faltam = task.prazo.slice(8, 10) - task.dia.slice(0, 2);
+  
+  
+
+  console.log(task);
+  listaTarefas.tarefas.push(task);
+  console.log(listaTarefas.tarefas);
+  localStorage.setItem("dbTasks", JSON.stringify(listaTarefas));
+  
 
 
   document.getElementById("formDiv").style.display = "none";
